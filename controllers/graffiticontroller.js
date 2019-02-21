@@ -22,6 +22,28 @@ router.post('/create', validateSession, (req, res) => {
     }
 })
 
+///get all graffitis for one user
+router.get('/getall', (req, res) => {
+    let userid=req.user.id;
+
+    Graffiti.findAll({
+        where:{owner: userid}
+    })
+    .then(graffiti => res.status(200).json(graffiti))
+    .catch(err => res.status(500).json({error:err}))
+});
+
+///get item by id
+router.get('/get/:id', (req, res) => {
+    let userid=req.user.id;
+
+    Graffiti.findOne({
+        where:{owner: userid}
+    })
+    .then(graffiti => res.status(200).json(graffiti))
+    .catch(err => res.status(500).json({error:err}))
+});
+
 //update graffiti
 router.put('/update/:id', (req, res) => {
     if(!req.errors) {
