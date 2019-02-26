@@ -35,10 +35,9 @@ router.get('/getall', (req, res) => {
 
 ///get item by id
 router.get('/get/:id', (req, res) => {
-    let userid=req.user.id;
 
     Graffiti.findOne({
-        where:{owner: userid}
+        where:{id: req.params.id}
     })
     .then(graffiti => res.status(200).json(graffiti))
     .catch(err => res.status(500).json({error:err}))
@@ -48,7 +47,7 @@ router.get('/get/:id', (req, res) => {
 router.put('/update/:id', (req, res) => {
     if(!req.errors) {
         Graffiti.update(req.body, {where: {id: req.params.id}})
-        .then(log => res.status(200).json(log))
+        .then(graffiti => res.status(200).json(graffiti))
         .catch(err => res.json(req.errors))
     } else {
         res.status(500).json(req.errors)
