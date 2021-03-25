@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Graffiti = sequelize.define("graffiti", {
+  const mobileGraffiti = sequelize.define("mobileGraffiti", {
     title: {
       type: DataTypes.STRING,
       allowNull: true,
@@ -20,10 +20,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DECIMAL, //??
       allowNull: false,
     },
-    owner: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
   });
-  return Graffiti;
+  return mobileGraffiti;
 };

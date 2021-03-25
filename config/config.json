@@ -27,6 +27,7 @@
     "port": "5432",
     "dialect": "postgres",
     "seederStorage": "sequelize",
-    "seederStorageTableName": "sequelize_data" 
+    "seederStorageTableName": "sequelize_data",
+    "operatorsAliases": false
   }
 }
