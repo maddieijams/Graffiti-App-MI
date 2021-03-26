@@ -7,7 +7,9 @@
     "port": "5432", 
     "dialect": "postgres",
     "seederStorage": "sequelize", 
-    "seederStorageTableName": "sequelize_data" 
+    "seederStorageTableName": "sequelize_data",
+    "operatorsAliases": false
+
   },
   "test": {
     "username": "postgres",
@@ -17,7 +19,9 @@
     "port": "5432",
     "dialect": "postgres",
     "seederStorage": "sequelize", 
-    "seederStorageTableName": "sequelize_data" 
+    "seederStorageTableName": "sequelize_data",
+    "operatorsAliases": false
+
   },
   "production": {
     "username": "postgres",
@@ -28,5 +32,6 @@
     "dialect": "postgres",
     "seederStorage": "sequelize",
     "seederStorageTableName": "sequelize_data",
+    "operatorsAliases": false
   }
 }
