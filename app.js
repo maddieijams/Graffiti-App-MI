@@ -1,7 +1,14 @@
 require("dotenv").config();
 
-let express = require("express");
-let app = express();
+const express = require("express");
+const helmet = require("helmet");
+
+const app = express();
+
+app.use(helmet());
+
+// let express = require("express");
+// let app = express();
 let user = require("./controllers/usercontroller");
 let home = require("./controllers/homecontroller");
 let graffiti = require("./controllers/graffiticontroller");
