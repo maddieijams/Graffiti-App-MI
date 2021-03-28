@@ -14,10 +14,10 @@ let home = require("./controllers/homecontroller");
 let graffiti = require("./controllers/graffiticontroller");
 let mobile = require("./controllers/mobilecontroller");
 let sequelize = require("./db");
-let bodyParser = require("body-parser");
+// let bodyParser = require("body-parser");
 
 sequelize.sync();
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(require("./middleware/headers"));
 app.use("/", express.static(__dirname + "/../public"));
 
