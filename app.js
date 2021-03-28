@@ -10,14 +10,14 @@ let home = require("./controllers/homecontroller");
 let graffiti = require("./controllers/graffiticontroller");
 let mobile = require("./controllers/mobilecontroller");
 let sequelize = require("./db");
-// let bodyParser = require("body-parser");
 
 sequelize.sync();
-// app.use(bodyParser.json());
-app.use("/", express.static(__dirname + "./public"));
+
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// app.use("/", express.static(__dirname + "./public"));
+app.use(express.static("./build"));
 app.use(require("./middleware/headers"));
 
 //modal, login or signup
