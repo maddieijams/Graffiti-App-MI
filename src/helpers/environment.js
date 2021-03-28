@@ -8,7 +8,7 @@ switch (window.location.hostname) {
     break;
 
   // this is the deployed react application
-  case "graffiti-app-client.herokuapp.com":
+  case "graffiti-app-mi.herokuapp.com":
     // this is the full url of your deployed API
     APIURL = "https://graffiti-app-mi.herokuapp.com";
     break;
