@@ -18,6 +18,7 @@ let sequelize = require("./db");
 
 sequelize.sync();
 // app.use(bodyParser.json());
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(require("./middleware/headers"));
 app.use("/", express.static(__dirname + "/../public"));
