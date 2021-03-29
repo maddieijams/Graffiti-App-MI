@@ -16,9 +16,9 @@ sequelize.sync();
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use("/", express.static(__dirname + "./public"));
-app.use(express.static("./build"));
+// app.use(express.static(path.join(__dirname, "build")));
 app.use(require("./middleware/headers"));
+app.use("/", express.static(__dirname + "./public"));
 
 //modal, login or signup
 app.use("", home);

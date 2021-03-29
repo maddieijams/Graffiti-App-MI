@@ -1,5 +1,7 @@
 module.exports = (req, res, next) => {
   res.header("access-control-allow-origin", "*");
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Credentials", true);
   res.header("access-control-allow-methods", "POST, DELETE, PUT, GET, OPTIONS");
   res.header(
     "access-control-allow-headers",
