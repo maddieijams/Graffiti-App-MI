@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const app = express();
-const helmet = require("helmet");
+// const helmet = require("helmet");
 // let express = require("express");
 // let app = express();
 let user = require("./controllers/usercontroller");
@@ -13,7 +13,7 @@ let sequelize = require("./db");
 
 sequelize.sync();
 
-app.use(helmet());
+// app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(require("./middleware/headers"));
