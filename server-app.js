@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(require("./middleware/headers"));
 // app.use("/", express.static(__dirname + "public"));
-app.use(express.static(__dirname + "/public"));
+app.use("/", express.static(__dirname + "/public"));
 
 //modal, login or signup
 app.use("", home);
