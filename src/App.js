@@ -55,13 +55,12 @@ class App extends Component {
         "Content-Type": "application/json",
       },
     })
-      .then((res) => res.text()) // convert to plain text
-      .then((text) => console.log(text));
-    // .then((res) => res.json())
-    // .then((graffiti) => this.setState({ graffiti: graffiti },
-    //   () => console.log(this.state.graffiti)
-    // )
-    // )
+      .then((res) => res.json())
+      .then((graffiti) =>
+        this.setState({ graffiti: graffiti }, () =>
+          console.log(this.state.graffiti)
+        )
+      );
   };
 
   setSessionState = (token) => {

@@ -2,6 +2,7 @@
   "name": "graffiti-app",
   "version": "1.0.0",
   "private": true,
+  "main": "server-app.js",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
@@ -39,7 +40,6 @@
     "server-test": "echo \"Error: no test specified\" && exit 1",
     "server-start": "node index.js"
   },
-  "proxy": "http://localhost:8000",
   "eslintConfig": {
     "extends": "react-app"
   },

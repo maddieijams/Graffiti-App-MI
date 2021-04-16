@@ -7,7 +7,6 @@ module.exports = (req, res, next) => {
     next();
   } else {
     var sessionToken = req.headers.authorization;
-    console.log(sessionToken);
     if (!sessionToken)
       return res
         .status(403)
@@ -26,7 +25,7 @@ module.exports = (req, res, next) => {
                 .send({ error: "failed to verify user, but we tried" })
           );
         } else {
-          res.status(400).send({ error: "not authorization" });
+          res.status(400).send({ error: err });
         }
       });
     }
