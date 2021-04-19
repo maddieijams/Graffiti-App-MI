@@ -14,9 +14,9 @@ let sequelize = require("./db");
 sequelize.sync();
 
 // app.use(helmet());
+app.use(require("./middleware/headers"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(require("./middleware/headers"));
 app.use(express.static(path.join(__dirname, "build")));
 
 app.get("/", function (req, res) {
@@ -24,7 +24,7 @@ app.get("/", function (req, res) {
 });
 
 //modal, login or signup
-app.use("", home);
+app.use("/home", home);
 app.use("/user", user);
 
 // unprotected parent route for mobile version of app
