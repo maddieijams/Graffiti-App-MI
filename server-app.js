@@ -31,7 +31,7 @@ app.use("/mobile", mobile);
 app.use(require("./middleware/validate-session"));
 app.use("/graffiti", graffiti);
 
-app.use("/", express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/build"));
 
 app.listen(process.env.PORT, () =>
   console.log(`app be listenin mon, on ${process.env.PORT}`)
