@@ -1,10 +1,10 @@
 require("dotenv").config();
 
 const express = require("express");
+const path = require("path");
 const app = express();
 // const helmet = require("helmet");
-// let express = require("express");
-// let app = express();
+
 let user = require("./controllers/usercontroller");
 let home = require("./controllers/homecontroller");
 let graffiti = require("./controllers/graffiticontroller");
@@ -17,14 +17,14 @@ sequelize.sync();
 app.use(require("./middleware/headers"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, "/build")));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
+  res.sendFile(path.join(__dirname, "/build", "index.html"));
 });
 
 //modal, login or signup
-app.use("/home", home);
+app.use("", home);
 app.use("/user", user);
 
 // unprotected parent route for mobile version of app
