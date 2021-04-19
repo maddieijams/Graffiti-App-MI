@@ -18,7 +18,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(require("./middleware/headers"));
 // app.use("/", express.static(__dirname + "public"));
-app.use("/", express.static(__dirname + "/public"));
 
 //modal, login or signup
 app.use("", home);
@@ -31,6 +30,8 @@ app.use("/mobile", mobile);
 //home-getall, create, update, delete
 app.use(require("./middleware/validate-session"));
 app.use("/graffiti", graffiti);
+
+app.use("/", express.static(__dirname + "/public"));
 
 app.listen(process.env.PORT, () =>
   console.log(`app be listenin mon, on ${process.env.PORT}`)
