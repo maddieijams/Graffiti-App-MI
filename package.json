@@ -2,6 +2,7 @@
   "name": "graffiti-app",
   "version": "1.0.0",
   "private": true,
+  "homepage": ".",
   "main": "server-app.js",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
