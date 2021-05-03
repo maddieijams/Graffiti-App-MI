@@ -1,23 +1,15 @@
 {
-  "name": "graffiti-app",
+  "name": "graffitiappserver",
   "version": "1.0.0",
-  "private": true,
-  "homepage": "/src/App.js",
+  "description": "server for graffiti app",
   "main": "server-app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server-app.js"
+  },
+  "author": "YOUR NAME HERE",
+  "license": "MIT",
   "dependencies": {
-    "@material-ui/core": "^3.9.2",
-    "@material-ui/icons": "^3.0.2",
-    "bootstrap": "^4.3.1",
-    "google-map-react": "^1.1.2",
-    "google-maps-react": "^2.0.2",
-    "material-design-icons": "^3.0.1",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-icons": "^3.4.0",
-    "react-js-pagination": "^3.0.2",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5",
-    "reactstrap": "^7.1.0",
     "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
@@ -32,22 +24,5 @@
     "pg": "^7.4.1",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.44.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server-test": "echo \"Error: no test specified\" && exit 1",
-    "server-start": "node index.js"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  }
 }
